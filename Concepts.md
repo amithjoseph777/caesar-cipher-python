@@ -1,24 +1,25 @@
-# Caesar Cipher Encryption and Decryption
+# Caesar Cipher: Encryption & Decryption
 
-## Theory, Concept, and Logic
+## Overview
 
-### Caesar Cipher
+The Caesar Cipher is one of the most basic and widely known encryption methods. It works by shifting each letter in a given text by a fixed number of positions in the alphabet, making it a simple yet effective way to obscure information.
 
-The Caesar Cipher is one of the simplest and most widely known encryption techniques. It is a substitution cipher where each letter in the plaintext is shifted a certain number of places down or up the alphabet.
+### Encryption Process
 
-#### Encryption Process
+1. **Shifting Characters**: Each letter in the plaintext is moved forward by a specified number of positions in the alphabet.
+2. **Wrapping Around**: If shifting a letter goes beyond 'z', it loops back to the beginning of the alphabet.
+3. **Case Sensitivity**: The case (uppercase or lowercase) of each letter is maintained.
 
-1. **Shift Letters**: Each letter in the plaintext is shifted by a fixed number of positions down the alphabet.
-2. **Wrapping**: If the shift extends past 'z', it wraps around to the beginning of the alphabet.
-3. **Maintaining Case**: Preserve the case (uppercase or lowercase) of each letter in the plaintext.
+### Decryption Process
 
-#### Decryption Process
+1. **Reversing the Shift**: Each letter in the ciphertext is moved backward by the same number of positions to retrieve the original plaintext.
+2. **Handling Letter Wrapping**: If shifting a letter moves past 'a', it loops back to 'z'.
 
-1. **Reverse Shift**: Each letter in the ciphertext is shifted back by the same number of positions to recover the original plaintext.
-2. **Handling Wrapping**: If the shift extends past 'a', it wraps around to the end of the alphabet.
+### Implementation Approach
 
-### Implementation Logic
+1. **Alphabet Representation**: The alphabet is stored as a string for easy reference.
+2. **Encryption Function**: Uses modular arithmetic to shift each letter forward according to the key.
+3. **Decryption Function**: Reverses the shift using the same key to reconstruct the original text.
 
-1. **Alphabet Representation**: The alphabet is represented as a string of lowercase letters.
-2. **Encryption Function**: Each letter in the plaintext is shifted by the specified key using modular arithmetic.
-3. **Decryption Function**: Each letter in the ciphertext is shifted back by the specified key to recover the original plaintext.
+This method, while simple, demonstrates fundamental principles of cryptography and is a great starting point for understanding encryption techniques.
+
